@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nethra | Portfolio</title>
+  
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="nav__bar">
+    <a href="#" class="logo">N</a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#Achievements">Achievements</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#internships">Internships</a></li>
+      <li><a href="#Languages">Languages</li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav__menu__btn" onclick="toggleMenu()">
+      <i class="ri-menu-line"></i>
+    </div>
+  </nav>
+  <!-- Welcome Popup -->
+<div class="cert-popup-content" id="certPopup">
+  <span class="cert-close" id="welcome-close">&times;</span>
+  <h3>👋 Welcome!</h3>
+  <p>This Page is Handle By Nethra. Thank you for visiting my portfolio.</p>
+</div>
+<script>
+  // Wait for the page to load
+  document.addEventListener("DOMContentLoaded", function () {
+    const closeBtn = document.getElementById("welcome-close");
+    const popup = document.getElementById("certPopup");
+
+    closeBtn.addEventListener("click", function () {
+      popup.style.display = "none";
+    });
+  });
+</script>
+<!-- Header -->
+  <header class="header__container" id="home">
+    <div class="header__content">
+      <h1>Hi, I'm <span style="color: var(--primary-color);">NethraKrishnan </span></h1>
+      <p class="section__description">A passionate and dedicated final-year student at University College of Engineering, Nagercoil. I specialize in Web Development and enjoy bringing ideas to life through beautiful and functional websites.</p>
+      <a href="#contact" class="btn">Let's Connect</a>
+    </div>
+    <div class="header__image">
+      <img src="nethra1.jpg" alt="Your Photo">
+    </div>
+  </header>
+
+  <script>
+  const slider = document.getElementById("internshipSlider");
+  let scrollAmount = 0;
+  let direction = 1;
+
+  function autoScroll() {
+    if (!slider) return;
+
+    scrollAmount += direction * 1.2;
+    slider.scrollLeft = scrollAmount;
+
+    if (scrollAmount >= slider.scrollWidth - slider.clientWidth || scrollAmount <= 0) {
+      direction *= -1;
+    }
+  }
+
+  setInterval(autoScroll, 30);
+</script>
+
+
+  <!-- About Section -->
+  <section class="section__container about__container" id="about">
+    <div class="about__content">
+      <h2 class="section__header">About Me</h2>
+      <p class="section__description">
+        With hands-on experience in HTML, CSS, JavaScript, Bootstrap, PHP, and Java, I have built several projects that reflect my creativity and problem-solving abilities. I’m a quick learner who’s always eager to explore new technologies and improve my skills.My strength lies in my ability to complete tasks efficiently within the given time, maintaining both quality and clarity in everything I do. </p>
+     <center><a href="Nethra K K-resume.pdf" class="btn">Download Resume</a></center>
+    </div>
+            
+  </section>
+
+ <section id="skills">
+  <h2 class="skills-title">Skills</h2>
+  <div class="skills-container">
+    <div class="skill-box">
+      <i class="ri-code-s-slash-line skill-icon"></i>
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>Java</li>
+        <li>Python</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <i class="ri-computer-line skill-icon"></i>
+      <h3>Web Development</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Bootstrap, PHP</li>
+        <li>DBMS (MySQL, SQL)</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <i class="ri-tools-line skill-icon"></i>
+      <h3>Tools & Technologies</h3>
+      <ul>
+        <li>Microsoft Office</li>
+        <li>GitHub, Power BI</li>
+        <li>OOPS, DSA</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <i class="ri-user-star-line skill-icon"></i>
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Team Management, Communication</li>
+        <li>Problem Solving, Creativity</li>
+        <li>Teamwork, Leadership</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section class="section__container" id="projects">
+    <h2 class="section__header">Projects</h2>
+    <div class="projects__grid">
+      <div class="project__card">
+        <img src="https://cdn-res.keymedia.com/cms/images/ca/126/0299_637400143594353148.jpg" alt="Project">
+        <h4>Employee Leave Application</h4>
+        <a href="https://github.com/NETHRA14/Employee-Leave-Application" class="project-btn" target="_blank">View Project</a>
+      </div>
+      <div class="project__card">
+        <img src="https://img.atom.com/story_images/visual_images/1666525296-gamingworld.png?class=show" alt="Project">
+        <h4> Online Fun Gamming World</h4>
+        <a href="https://github.com/NETHRA14/Gamming-World" class="project-btn" target="_blank">View Project</a>
+      </div>
+      <div class="project__card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJYB30eCY0JZ5fKEEuvWQKqMIEgCnI6Rugfw&s" alt="Project">
+        <h4>Wildlife Monitoring System</h4>
+        <a href="https://github.com/NETHRA14/Wildlife-Monitoring-System-using-Camera-Traps" class="project-btn" target="_blank">View Project</a>
+      </div>
+      <div class="project__card">
+        <img src="https://www.nisshin-oillio.com/english/assets/images/about_us/top/corporate_photo04.jpg" alt="Project">
+        <h4>Plant Disease Detection using AI</h4>
+        <a href="https://github.com/NETHRA14/Plant-Disease-Detection-System-" class="project-btn" target="_blank">View Project</a>
+      </div>
+      <div class="project__card">
+        <img src="https://www.zonkafeedback.com/hubfs/emotion%20detection.png" alt="Project">
+        <h4>Emotion Detection</h4>
+        <a href="https://github.com/NETHRA14/Emotion-Detection" class="project-btn" target="_blank">View Project</a>
+      </div>
+      <div class="project__card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNa8qO_PYY4z59BZaRPTtKLOmgUEUKqBwsoGQdUUk21pdnqkTf9YHsaOWRwRk8JpX07YI&usqp=CAU" alt="Project">
+        <h4>Brain Tumor Segmentation</h4>
+        <a href="https://github.com/NETHRA14/Brain-Tumor-Segmentation-using-computer-vision" class="project-btn" target="_blank">View Project</a>
+      </div>
+      <div class="project__card">
+        <img src="data:image/jpeg;base64,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" alt="Project">
+        <h4>Number Plate Detection</h4>
+        <a href="https://github.com/NETHRA14/Number-Plate-Detection-" class="project-btn" target="_blank">View Project</a>
+      </div>
+      <div class="project__card">
+        <img src="https://www.velocity-it.com/wp-content/uploads/2023/07/UiPath-Robotic-Process-Automationn.png" alt="Project">
+        <h4>Loan Application Process</h4>
+        <a href="https://github.com/NETHRA14/Automation-of-Loan-Application-Process" class="project-btn" target="_blank">View Project</a>
+      </div>
+      <!-- More project cards -->
+    </div>
+  </section>
+<!--achieve-->
+  <section class="section__header" id="Achievements">
+  <h2 class="section__header">Achievements</h2>
+  <div class="achievement__grid">
+
+    <!-- Card 1 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://media.licdn.com/dms/image/v2/D5622AQHMganxG6KtSg/feedshare-shrink_1280/B56Zap_JSKHgAo-/0/1746608627069?e=1753920000&v=beta&t=_c_gxnBgRYlTrCgPX9j7QsJnj0nqx4ljl6ALsvUSMqI" alt="Infosys Winner">
+        </div>
+        <div class="flip-card-back">
+          <h3>PRAGATI:PATH TO FUTURE</h3>
+          <p>I'm happy to share that I am a part of the Infosys Pragathi:Path to Future Program Cohort</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="n1h.jpg" alt="Open CV">
+        </div>
+        <div class="flip-card-back">
+          <h3>Naan Mudhalvan Engineering Hackathon 2025</h3>
+          <p>Thrilled to share that my team emerged as Runner-Up in the Level 3 Grand Finale (Offline Hackathon) after clearing Levels 1 & 2! 🥈✨
+Honored to be recognized as the Star Winner of my team — a truly unforgettable journey!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="gh.jpg" alt="AIxplorers">
+        </div>
+        <div class="flip-card-back">
+          <h3>Google AI Hackathon'25</h3>
+          <p>We are AIxplorers — a passionate, forward-thinking team of developers, dreamers, and doers exploring the limitless potential of Artificial Intelligence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://www.coursesxpert.com/wp-content/uploads/2021/03/Diploma-in-Computer-Applications-DCA-Course.jpg" alt="Internship Award">
+        </div>
+        <div class="flip-card-back">
+          <h3>Diplomo in Computer Application</h3>
+          <p>Diploma in Computer Application (DCA) issued by CSC – Computer Software College, an ISO 9001:2015 certified institution</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Certifications Section -->
+  <section class="section__container" id="certifications">
+    <h2 class="section__header">Certifications</h2>
+    <div class="cert-row">
+      <div class="cert-box">
+        <h4>Programming in JAVA</h4>
+        <p class="certification-issuer">NPTEL IIT </p>
+        <p class="certification-date">2025</p>
+      </div>
+      <div class="cert-box">
+        <h4>Python in Data Science</h4>
+        <p class="certification-issuer">NPTEL IIT</p>
+        <p class="certification-date">2024</p>
+      </div>
+      <div class="cert-box">
+        <h4>AI/ML for Geodata Analysis</h4>
+        <p class="certification-issuer">ISRO</p>
+        <p class="certification-date">2024</p>
+      </div>
+      <div class="cert-box">
+        <h4>Geodata Sharing and Cyber Security</h4>
+        <p class="certification-issuer">ISRO</p>
+        <p class="certification-date">2024</p>
+      </div>
+      <div class="cert-box">
+        <h4>TCS Certifications</h4>
+        <p class="certification-issuer">TCS ion</p>
+        <p class="certification-date">2023-2024</p>
+      </div>
+      <div class="cert-box">
+        <h4>Deep learning with TensorFlow</h4>
+        <p class="certification-issuer">IBM</p>
+        <p class="certification-date">2024</p>
+      </div>
+      <div class="cert-box">
+        <h4>Machine Learning with Python</h4>
+        <p class="certification-issuer">IBM</p>
+        <p class="certification-date">2024</p>
+      </div>
+      <div class="cert-box">
+        <h4>Data Analysis using Python</h4>
+        <p class="certification-issuer">IBM</p>
+        <p class="certification-date">2024</p>
+      </div>
+      <div class="cert-box">
+        <h4>Coding Simulation</h4>
+        <p class="certification-issuer">ACCENTURE</p>
+        <p class="certification-date">2025</p>
+      </div>
+      <!-- More cert-boxes -->
+    </div>
+  </section>
+
+  
+
+
+
+
+
+  <!-- Education Section -->
+  <section class="section__container" id="education">
+    <h2 class="section__header">Education</h2>
+    <div class="education__details">
+      <div class="education__item">
+        <h4>University College of Engineering, Nagercoil</h4>
+        <p>B.E. in Computer Science - Final Year</p>
+        <p>2022-2026 || CGPA:8.3</p>
+      </div>
+      </div>
+      
+  </section>
+  <section id="internships">
+  <h2 class="internship-title">Internships</h2>
+  <div class="internship-scroll-container" id="internshipSlider">
+    
+    <!-- Internship Card 1 -->
+    <div class="internship-card">
+      <div class="internship-header">
+        <i class="ri-code-s-slash-line icon"></i>
+        <h3>PHP Development Internship</h3>
+      </div>
+      <p class="company-name">TECHCITI SOFTWARE CONSULTING PVT LTD</p>
+      <p class="intern-duration">Jan 2025 – Aug 2025</p>
+      <ul class="intern-description">
+        <li>Built responsive web interfaces.</li>
+        <li>Used HTML, CSS, JS, PHP and Bootstrap.</li>
+        <li>Deployed Employee Leave Application Project</li>
+      </ul>
+    </div>
+
+    <!-- Internship Card 2 -->
+    <div class="internship-card">
+      <div class="internship-header">
+        <i class="ri-terminal-window-line icon"></i>
+        <h3>Artificial Intelligence Internship</h3>
+      </div>
+      <p class="company-name">Shell India Markets Pvt Ltd</p>
+      <p class="intern-duration">April 28 – May 28, 2025</p>
+      <ul class="intern-description">
+        <li>This experience enhanced my understanding of AI applications in sustainability and green tech.</li>
+        
+        <li>project titled "Plant Disease Detection System" </li>
+      </ul>
+    </div>
+
+    <!-- Internship Card 3 -->
+    <div class="internship-card">
+      <div class="internship-header">
+        <i class="ri-bar-chart-2-line icon"></i>
+        <h3>Web Development Internship</h3>
+      </div>
+      <p class="company-name">OctaNet Service Pvt Ltd </p>
+      <p class="intern-duration">1st July 2024 to 1st August 2024</p>
+      <ul class="intern-description">
+        <li>Developed a web application usin HTML,CSS and JAVASCRIPT</li>
+        <li>Expanded my knowledge in Full-stack development.</li>
+        
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="Languages">
+<h2 class="section-subtitle">Languages</h3>
+        <div class="languages-container">
+            <div class="language-card">
+                <i class="ri-flag-tamil-line"></i>
+                <h4 class="language-title">English</h4>
+            </div>
+            <div class="language-card">
+                <i class="ri-flag-english-line"></i>
+                <h4 class="language-title">Tamil</h4>
+            </div>
+            <div class="language-card">
+                <i class="ri-flag-telugu-line"></i>
+                <h4 class="language-title">Kannada</h4>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Contact Section -->
+  <section class="section__container contact__container" id="contact">
+    <h2 class="section__header">Get In Touch</h2>
+    <div class="form-wrapper">
+      <form class="contact__form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <div class="send-options">
+          <button type="submit" class="btn-gmail"><i class="ri-mail-line"></i> Gmail</button>
+          <button type="button" class="btn-whatsapp"><i class="ri-whatsapp-line"></i> WhatsApp</button>
+        </div>
+      </form>
+    </div>
+    <div class="contact__socials">
+  <a href="https://www.linkedin.com/in/nethra-k-k-572858293/" target="_blank">
+    <i class="ri-linkedin-fill"></i>
+  </a>
+  <a href="https://github.com/NETHRA14" target="_blank">
+    <i class="ri-github-fill"></i>
+  </a>
+  <a href="mailto:nethrapudur@gmail.com">
+    <i class="ri-mail-line"></i>
+  </a>
+</div>
+ </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 NethraKrishnan. All Rights Reserved. | <a href="#" class="footer-link">Top</a></p>
+  </footer>
+
+
+</body>
+</html>
